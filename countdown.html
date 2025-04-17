@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Countdown</title>
+  <link rel="stylesheet" href="countdown.css">
+</head>
+<body>
+         <!-- Background Music -->
+  <audio id="background-music" autoplay loop muted>
+    <source src="/web-bg.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+  <div class="main-container">
+    <!-- Heading -->
+    <h1 class="heading">
+      Wedding Countdown of <span class="neon-glow">Srushti and Sid</span>
+    </h1>
+
+    <!-- Countdown Timer -->
+    <div class="countdown-container">
+      <div class="time-box">
+        <div id="days" class="time-section">00</div>
+        <div class="label">Days</div>
+      </div>
+      <div class="time-box">
+        <div id="hours" class="time-section">00</div>
+        <div class="label">Hours</div>
+      </div>
+      <div class="time-box">
+        <div id="minutes" class="time-section">00</div>
+        <div class="label">Minutes</div>
+      </div>
+      <div class="time-box">
+        <div id="seconds" class="time-section">00</div>
+        <div class="label">Seconds</div>
+      </div>
+    </div>
+
+    <!-- Home Button -->
+    <div class="home-button-container">
+      <a href="https://xyz138.github.io/similu/" class="home-button">Home</a>
+    </div>
+  </div>
+
+  <script src="countdown.js"></script>
+  <script>
+    // Unmute audio once the page loads
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('background-music');
+      audio.muted = false;
+      audio.play().catch(() => {
+        console.log("Autoplay restrictions in effect. User interaction needed.");
+      });
+    });
+  </script>
+</body>
+</html>

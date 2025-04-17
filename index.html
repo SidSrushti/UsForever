@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Srushti and Sid</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+    //     const password = '1522'; // Replace with your password
+    //     const userPassword = prompt("Enter the password:");
+        
+    //     if (userPassword !== password) {
+    //       document.body.innerHTML = "<h1>Access Denied</h1>";
+    //     }
+    //   </script>
+      
+  <!-- Background Music -->
+  <audio id="background-music" autoplay loop muted>
+    <source src="/music.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Main Container -->
+  <div class="main-container">
+    <!-- Welcome Section -->
+    <div class="welcome">
+      <h1 class="animated-welcome">WELCOME !</h1>
+      <p>I KNOW YOU ARE HERE <span class="glow">SRUSHTI</span>!</p>
+      <p>PLEASE CHOOSE THE OPTIONS BELOW</p>
+    </div>
+
+    <!-- Button Section -->
+    <div class="buttons">
+      <a href="quiz.html" class="button">ROSE QUIZ</a>
+      <a href="journey.html" class="button">OUR JOURNEY</a>
+    
+      <a href="countdown.html" class="button">WEDDING COUNTDOWN</a>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+      <p>@Srushti and Sid</p>
+    </footer>
+  </div>
+
+  <script>
+    // Unmute audio once the page loads
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('background-music');
+      audio.muted = false;
+      audio.play().catch(() => {
+        console.log("Autoplay restrictions in effect. User interaction needed.");
+      });
+    });
+  </script>
+</body>
+</html>

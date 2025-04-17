@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Special Memory</title>
+  <link rel="stylesheet" href="special.css">
+</head>
+<body>
+         <!-- Background Music -->
+  <audio id="background-music" autoplay loop muted>
+    <source src="/web-bg.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+  <!-- Main Container -->
+  <div class="main-container">
+    <div class="envelope-container" id="envelopeContainer">
+      <img src="envelope.svg" alt="Envelope" class="envelope-image" id="envelope">
+      <p class="click-text" id="clickText">Click anywhere to Open</p>
+    </div>
+    <img src="/OG.png" alt="Letter" class="letter-image hidden" id="letter">
+  </div>
+    <!-- Home Button -->
+    <a href="#" class="home-button">Back to Home</a>
+
+  <script src="special.js"></script>
+  <script>
+    // Unmute audio once the page loads
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('background-music');
+      audio.muted = false;
+      audio.play().catch(() => {
+        console.log("Autoplay restrictions in effect. User interaction needed.");
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('Landing Page.svg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+  }
+  
+  /* Main Container */
+  .main-container {
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Envelope Container */
+  .envelope-container {
+    position: relative;
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+  }
+  
+  /* Envelope Image */
+  .envelope-image {
+    width: 100%;
+    height: auto;
+    animation: levitate 3s infinite;
+  }
+  
+  /* Click Text */
+  .click-text {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: white;
+    animation: levitateText 2s infinite;
+  }
+  
+  /* Letter Image */
+  .letter-image {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+  }
+  
+  .letter-image.hidden {
+    display: none;
+  }
+  
+  /* Animations */
+  @keyframes levitate {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes levitateText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  @keyframes ripApart {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.2) rotate(-10deg); opacity: 0; }
+  }
+  
+  /* Envelope Rip Animation */
+  .envelope-container.ripped .envelope-image {
+    animation: ripApart 1s forwards;
+  }
+  
+  .envelope-container.ripped + .letter-image {
+    display: block;
+    opacity: 1;
+  }
+  .home-button {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 25px;
+    color: white;
+    background: #ff66c4;
+    border: 2px solid #ff66c4;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .home-button:hover {
+    color: #ff66c4;
+    background: transparent;
+  }
+  

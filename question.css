@@ -1,0 +1,99 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: url('Landing\ Page.svg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Main Container */
+  .main-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* White blur effect */
+  }
+  
+  /* Question Section */
+  .question-section {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.25); /* Light, semi-transparent white */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Question Styling */
+  .question {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Answer Buttons */
+  .answers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .answer-button {
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #e600ff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .answer-button:hover {
+    background-color: #e600ff;
+    color: white;
+    box-shadow: 0 0 10px #e600ff;
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes glow {
+    0%, 100% {
+      text-shadow: 0 0 10px #e600ff, 0 0 20px #e600ff, 0 0 30px #e600ff, 0 0 40px #e600ff;
+    }
+    50% {
+      text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff, 0 0 35px #ff00ff, 0 0 45px #ff00ff;
+    }
+  }
+  
+  .answer-button:hover {
+    animation: glow 1s infinite;
+  }
+  /* Vibration Animation */
+@keyframes vibrate {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+  }
+  
+  /* Styling for the "No" button when clicked */
+  .answer-button.no-active {
+    animation: vibrate 0.5s ease infinite;
+    color: white;
+    background-color: red;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 15px red;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+  }
+  

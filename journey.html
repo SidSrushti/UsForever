@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Journey</title>
+  <link rel="stylesheet" href="journey.css">
+</head>
+<body>
+         <!-- Background Music -->
+  <audio id="background-music" autoplay loop muted>
+    <source src="/music.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+  <div class="main-container">
+    <!-- Heading -->
+    <h1 class="journey-heading">Our Journey</h1>
+    <p class="sub-heading">"A timeline of love and promises"</p>
+
+    <!-- Timeline Section -->
+    <div class="timeline">
+      <!-- Checkpoint 1 -->
+      <div class="checkpoint">
+        <img src="ft.svg" alt="Talking Icon" class="icon">
+        <div class="info">
+          <h2>15 January 2023</h2>
+          <p>We started talking and everything began.</p>
+        </div>
+      </div>
+
+      <!-- Checkpoint 2 -->
+      <div class="checkpoint">
+        <img src="bouqet.svg" alt="Confession Icon" class="icon">
+        <div class="info">
+          <h2>21 September 2023</h2>
+          <p>The day we confessed and our hearts became one.</p>
+        </div>
+      </div>
+
+      <!-- Checkpoint 3 -->
+      <div class="checkpoint">
+        <img src="together.svg" alt="Commitment Icon" class="icon">
+        <div class="info">
+          <h2>25 September</h2>
+          <p>The start of forever, as we committed to each other.</p>
+        </div>
+      </div>
+
+      <!-- Checkpoint 4 -->
+      <div class="checkpoint locked">
+        <img src="first.svg" alt="Lock Icon" class="icon">
+        <div class="info">
+          <h2>25 September 20XX</h2>
+          <p>Our wedding, a promise waiting to be fulfilled.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Button -->
+    <a href="https://xyz138.github.io/similu/" class="home-button">Back to Home</a>
+  </div>
+  <script>
+    // Unmute audio once the page loads
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('background-music');
+      audio.muted = false;
+      audio.play().catch(() => {
+        console.log("Autoplay restrictions in effect. User interaction needed.");
+      });
+    });
+  </script>
+</body>
+</html>

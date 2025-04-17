@@ -1,0 +1,107 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('Landing Page.svg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+  }
+  
+  /* Main Container */
+  .main-container {
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Heading */
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .neon-glow {
+    color: #ff1493; /* Pinkish glow */
+    text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493, 0 0 30px #ff1493;
+    animation: neonGlow 2s infinite, levitateText 3s infinite;
+  }
+  
+  /* Countdown Container */
+  .countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Backdrop with 80% transparency */
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .time-box {
+    text-align: center;
+  }
+  
+  .time-section {
+    font-family: 'Courier New', monospace;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff69b4; /* Pinkish text color */
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+    margin-bottom: 5px;
+  }
+  
+  .label {
+    font-size: 1rem;
+    color: white;
+    text-shadow: 0 0 5px white;
+  }
+  
+  /* Home Button */
+  .home-button-container {
+    margin-top: 30px;
+  }
+  
+  .home-button {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border: 2px solid #ff1493;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+  }
+  
+  .home-button:hover {
+    background: #ff1493;
+    color: white;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px white, 0 0 20px white;
+  }
+  
+  /* Animations */
+  @keyframes neonGlow {
+    0%, 100% {
+      text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493, 0 0 30px #ff1493;
+    }
+    50% {
+      text-shadow: 0 0 20px #ff1493, 0 0 30px #ff1493, 0 0 40px #ff1493;
+    }
+  }
+  
+  @keyframes levitateText {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  

@@ -1,0 +1,84 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('Landing Page.svg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    color: white;
+  }
+  
+  /* Main Container */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  /* Welcome Section */
+  .welcome h1 {
+    font-size: 4rem;
+    margin: 0;
+    letter-spacing: 5px;
+    animation: shake 1s infinite;
+  }
+  
+  .welcome p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+  
+  .glow {
+    color: #e600ff;
+    font-weight: bold;
+    text-shadow: 0 0 10px #e600ff, 0 0 20px #e600ff, 0 0 30px #e600ff, 0 0 40px #e600ff;
+  }
+  
+  /* Buttons Section */
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+  }
+  
+  .button {
+    display: inline-block;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #e600ff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .button:hover {
+    background: #e600ff;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  /* Footer */
+  footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  /* Animations */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+  }
+  

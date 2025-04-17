@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rose Quiz</title>
+  <link rel="stylesheet" href="question.css">
+</head>
+<body>
+     <!-- Background Music -->
+  <audio id="background-music" autoplay loop muted>
+    <source src="/web-bg.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+  <!-- Main Container -->
+  <div class="main-container">
+    <!-- Question Section -->
+    <div class="question-section">
+      <p class="question">In a world full of red roses, will you be my golden one, the rare bloom that stands out?</p>
+      <div class="answers">
+        <button class="answer-button">Yes!!</button>
+        <button class="answer-button">No.</button>
+
+      </div>
+    </div>
+    <script>
+        document.querySelector('.answer-button:nth-child(2)').addEventListener('click', function() {
+          this.classList.add('no-active');
+      
+          // Remove the 'no-active' class after 3 seconds
+          setTimeout(() => {
+            this.classList.remove('no-active');
+          }, 3000);
+        });
+      </script>
+      <script>
+        document.querySelector('.answer-button:nth-child(1)').addEventListener('click', function() {
+          window.location.href = 'special.html';
+        });
+      </script>
+       <script>
+        // Unmute audio once the page loads
+        window.addEventListener('DOMContentLoaded', () => {
+          const audio = document.getElementById('background-music');
+          audio.muted = false;
+          audio.play().catch(() => {
+            console.log("Autoplay restrictions in effect. User interaction needed.");
+          });
+        });
+      </script>
+      
+  </div>
+</body>
+</html>

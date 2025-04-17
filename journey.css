@@ -1,0 +1,101 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('Landing Page.svg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
+  
+  /* Main Container */
+  .main-container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  /* Heading Styles */
+  .journey-heading {
+    font-size: 3rem;
+    color: #ff66c4; /* Pink Neon Shade */
+    text-shadow: 0 0 20px #ff66c4, 0 0 40px #ff66c4;
+    animation: levitate 2s infinite ease-in-out;
+  }
+  
+  .sub-heading {
+    font-size: 1.2rem;
+    color: #ffffffa0; /* Semi-transparent white */
+  }
+  
+  /* Timeline Section */
+  .timeline {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+  }
+  
+  .checkpoint {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.2); /* Backdrop filter */
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+  }
+  
+  .checkpoint img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .info h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .info p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  /* Locked Checkpoint */
+  .locked {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
+  /* Home Button */
+  .home-button {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 25px;
+    color: white;
+    background: #ff66c4;
+    border: 2px solid #ff66c4;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  
+  .home-button:hover {
+    color: #ff66c4;
+    background: transparent;
+  }
+  
+  /* Animations */
+  @keyframes levitate {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
