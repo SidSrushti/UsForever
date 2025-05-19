@@ -1,0 +1,146 @@
+/* Reset */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Fullscreen and center */
+  .fullscreen-center {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    z-index: 10;
+    flex-direction: column;
+    color: white;
+  }
+  
+  /* Video styles */
+  #loveVideo {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255,0,128,0.7);
+    object-fit: contain;
+  }
+  
+  /* Skip Button */
+  #skipBtn {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #ff4081;
+    user-select: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  #skipBtn:hover {
+    color: #ff79a8;
+  }
+  
+  /* Hide elements */
+  .hidden {
+    display: none !important;
+  }
+  
+  /* Chat Container */
+  .chat-container {
+    position: relative;
+    max-width: 400px;
+    width: 90vw;
+    margin: 80px auto;
+    background: rgba(255 255 255 / 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 40px rgba(255,0,128,0.4);
+    padding: 20px;
+    color: white;
+  }
+  
+  /* Chat messages area */
+  .chat-messages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+  
+  /* Each chat bubble */
+  .chat-bubble {
+    background: #ff4081;
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    border-radius: 20px 20px 20px 5px;
+    max-width: 80%;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    box-shadow: 0 4px 10px rgba(255,64,129,0.4);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+  }
+  
+  /* Animate chat bubble fade in + move up */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Reveal Button */
+  #revealBtn {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #ff4081;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff4081;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+  }
+  #revealBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff79a8;
+  }
+  
+  /* Surprise message */
+  .surprise {
+    max-width: 500px;
+    margin: 40px auto;
+    background: rgba(255 255 255 / 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    color: #ff4081;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(255,64,129,0.5);
+  }
+  
+  .surprise h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Background hearts animation */
+  .hearts-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    pointer-events: none;
+    background: radial-gradient(circle, #ff4081 10%, transparent 70%);
+    animation: pulseBg 5s infinite alternate;
+    z-index: 0;
+  }
+  
+  @keyframes pulseBg {
+    0% { filter: brightness(0.8); }
+    100% { filter: brightness(1.2); }
+  }
+  
